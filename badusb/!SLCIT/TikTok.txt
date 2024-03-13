@@ -1,0 +1,23 @@
+REM ****************************************************************************
+REM Author: SLCIT Inc.
+REM Date: 2024-03-12
+REM Description: A simple Ruby Ducky script
+REM ****************************************************************************
+DELAY 1000
+GUI r
+DELAY 200
+STRING powershell Start-Process https:
+DELAY 200
+ALTCHAR 0047 ; Slash
+DELAY 200
+ALTCHAR 0047 ; Slash
+DELAY 200
+STRING www.tiktok.com
+DELAY 200
+ALTCHAR 0047 ; Slash
+DELAY 200
+ALTCHAR 0064 ; At sign
+DELAY 200
+STRING simoncharest405
+DELAY 500
+ENTER
