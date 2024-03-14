@@ -12,20 +12,19 @@ Preset: FuriHalSubGhzPresetOok650Async
 Protocol: Holtek_HT12X
 Bit: 12
 Key: 00 00 00 00 00 00 04 {KEY}
-TE: 333"""  # Script template
-OUTPUT: Path = Path(__file__).parent.parent.joinpath("subghz/!SLCIT/")  # Output path
+TE: 333"""  # Sub-GHz script template
+OUTPUT: Path = Path(__file__).parent.parent.joinpath("subghz/!SLCIT")  # Output path
 KEYS: dict = {
     "3_Fan_High": 223,
     "2_Fan_Medium": 239,
     "1_Fan_Low": 247,
     "0_Fan_Off": 253,
     "Light_Toggle": 254
-}  # Keys to ignore
+}  # Known keys
 
 
 def main() -> None:
-    #generate_fan_reverse_scripts()  # Fan reverse ended up being 251 (FB)
-    pass
+    generate_fan_reverse_scripts()  # Fan reverse ended up being 251 (FB)
 
 
 def generate_fan_reverse_scripts() -> None:
@@ -35,11 +34,11 @@ def generate_fan_reverse_scripts() -> None:
     key: int
     value: str
 
-    for key in range(START_KEY, END_KEY + 1):
-        if key not in [value for value in KEYS.values()]:
-            value = hex(key)[2:].upper()
-            open(OUTPUT.joinpath(f"Fan_Reverse_{value}.sub"), "w").write(TEMPLATE.replace("{KEY}", value))
-
+    for key in range(START_KEY, END_KEY + 1):  # Loop from lowest to highest known keys
+        if key not in [value for value in KEYS.values()]:  # Skip already known keys
+            value = hex(key)[2:].upper()  # Extract hexadecimal value
+            open(OUTPUT.joinpath(f"Fan_Reverse_{value}.sub"), "w").write(TEMPLATE.replace("{KEY}", value))  # Write Sub-GHz script
+            break
 
 if __name__ == "__main__":
     main()
