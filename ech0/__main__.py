@@ -38,7 +38,6 @@ def generate_fan_reverse_scripts() -> None:
         if key not in [value for value in KEYS.values()]:  # Skip already known keys
             value = hex(key)[2:].upper()  # Extract hexadecimal value
             open(OUTPUT.joinpath(f"Fan_Reverse_{value}.sub"), "w").write(TEMPLATE.replace("{KEY}", value))  # Write Sub-GHz script
-            break
 
 if __name__ == "__main__":
     main()
