@@ -4,16 +4,20 @@ Flipper Zero scripts.
 ## Built With
 
 ### Backend
-- [Python](https://www.python.org);
+- [Python](https://www.python.org/);
+
+### Libraries
+- [pytest](https://docs.pytest.org/);
+- [uFBT](https://github.com/flipperdevices/flipperzero-ufbt/);
 
 ### Virtual Environment
-- [venv](https://docs.python.org/library/venv);
+- [venv](https://docs.python.org/library/venv/);
 
 ### Package Management System
-- [pip](https://pip.pypa.io);
+- [pip](https://pip.pypa.io/);
 
 ### Integrated Development Environment (IDE)
-- [Visual Studio Code](https://code.visualstudio.com);
+- [Visual Studio Code](https://code.visualstudio.com/);
 
 ### AI System
 - [ChatGPT](https://chat.openai.com/).
@@ -22,7 +26,7 @@ Flipper Zero scripts.
 
 ### Installation
 1. Install [Python](https://www.python.org/downloads/);
-2. Install [Visual Studio Code](https://code.visualstudio.com/download);
+2. Install [Visual Studio Code](https://code.visualstudio.com/download/);
 3. Clone solution:
 ```
 C:
@@ -55,6 +59,13 @@ python ech0
 10. Run tests:
 ```
 pytest
+```
+11. Create the Flipper Application Manifest (.fam):
+```
+mkdir C:\source\ech0\apps\hello_world
+cd C:\source\ech0\apps\hello_world
+ufbt vscode_dist create APPID=hello_world
+ufbt fap_hello_world
 ```
 
 ## License
