@@ -76,7 +76,9 @@ ufbt fap_hello_world
 - Email: [Simon Charest](mailto:simoncharest@gmail.com).
 
 ## Acknowledgements
+- [example_custom_font](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/applications/examples/example_custom_font);
 - [Flipper Lab](https://lab.flipper.net/apps);
 - [Flipper Zero Documentation](https://docs.flipper.net/);
 - [Flipper Zero Web Serial Terminal](https://googlechromelabs.github.io/serial-terminal/);
+- [flipper-image-test](https://github.com/kbembedded/flipper-image-test)
 - [Get started with the Dev Board](https://docs.flipper.net/development/hardware/wifi-developer-board/get-started).

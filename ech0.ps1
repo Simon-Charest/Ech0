@@ -31,6 +31,9 @@
 
                 # Save current directory
                 [string] $currentDirectory = Get-Location
+                
+                # Delete build directory
+                Remove-Item -Path $BUILD_PATH -Recurse -Force -ErrorAction SilentlyContinue
 
                 # Go to app directory
                 cd $APP_PATH
@@ -39,7 +42,7 @@
                 ufbt $PROJECT_NAME
 
                 # Copy application binary
-                cp $APP_BINARY $APP_PATH
+                cp $APP_BINARY $APP_PATH -ErrorAction SilentlyContinue
 
                 # Go back to current directory
                 cd $currentDirectory

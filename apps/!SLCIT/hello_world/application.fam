@@ -5,7 +5,8 @@ App(
     name="Hello World !",  # Displayed in menus
     apptype=FlipperAppType.EXTERNAL,
     entry_point="hello_world_app",
-    stack_size=2 * 1024,
+    requires=["gui"],
+    stack_size=1 * 1024,
     fap_category="Examples",
     # Optional values
     fap_version="0.1",
