@@ -1,7 +1,7 @@
 REM ****************************************************************************
 REM Author: SLCIT Inc.
 REM Date: 2024-03-12
-REM Description: A simple Ruby Ducky script
+REM Description: A simple DuckyScript
 REM ****************************************************************************
 DELAY 1000
 GUI r

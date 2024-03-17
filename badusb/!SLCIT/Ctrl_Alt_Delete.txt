@@ -1,21 +1,9 @@
 REM ****************************************************************************
 REM Author: SLCIT Inc.
-REM Date: 2024-03-13
+REM Date: 2024-03-16
 REM Description: A simple DuckyScript
 REM ****************************************************************************
 DELAY 1000
 GUI r
-DELAY 200
-STRING powershell Start-Process https:
-DELAY 200
-ALTCHAR 0047 ; Slash
-DELAY 200
-ALTCHAR 0047 ; Slash
-DELAY 200
-STRING twitter.com
-DELAY 200
-ALTCHAR 0047 ; Slash
-DELAY 200
-STRING scharest
-DELAY 500
-ENTER
+CTRL-ALT DELETE
+DELAY 1000

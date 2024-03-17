@@ -8,10 +8,10 @@ App(
     stack_size=2 * 1024,
     fap_category="Examples",
     # Optional values
-    # fap_version="0.1",
+    fap_version="0.1",
     fap_icon="hello_world.png",  # 10x10 1-bit PNG
-    # fap_description="A simple app",
-    # fap_author="SLCIT Inc.",
-    # fap_weburl="https://github.com/Simon-Charest/ech0",
-    fap_icon_assets="images",  # Image assets to compile for this application
+    fap_description="A simple app",
+    fap_author="SLCIT Inc.",
+    fap_weburl="https://github.com/Simon-Charest/ech0",
+    fap_icon_assets="images"  # Image assets to compile for this application
 )

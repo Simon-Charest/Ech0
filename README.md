@@ -74,3 +74,9 @@ ufbt fap_hello_world
 ## Contact
 - GitHub: [Ech0](https://github.com/Simon-Charest/ech0);
 - Email: [Simon Charest](mailto:simoncharest@gmail.com).
+
+## Acknowledgements
+- [Flipper Lab](https://lab.flipper.net/apps);
+- [Flipper Zero Documentation](https://docs.flipper.net/);
+- [Flipper Zero Web Serial Terminal](https://googlechromelabs.github.io/serial-terminal/);
+- [Get started with the Dev Board](https://docs.flipper.net/development/hardware/wifi-developer-board/get-started).
