@@ -1,4 +1,4 @@
-gcc -o cards.exe cards.c
-gcc -o hello_world_c.exe hello_world.c
-g++ -o hello_world_cpp.exe hello_world.cpp
-javac .\hello_world.java
+gcc -o $PSScriptRoot\cards.exe $PSScriptRoot\cards.c
+gcc -o $PSScriptRoot\hello_world_c.exe $PSScriptRoot\hello_world.c
+g++ -o $PSScriptRoot\hello_world_cpp.exe $PSScriptRoot\hello_world.cpp
+javac $PSScriptRoot\hello_world.java

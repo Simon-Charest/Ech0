@@ -12,9 +12,10 @@
 ║ 1. Activate virtual environment    ║
 ║ 2. Deactivate virtual environment  ║
 ║ 3. Build Hello World ! application ║
-║ 4. Open Flipper Lab                ║
-║ 5. Open Serial Terminal            ║
-║ 6. Exit                            ║
+║ 4. Build Test applications         ║
+║ 5. Open Flipper Lab                ║
+║ 6. Open Serial Terminal            ║
+║ 7. Exit                            ║
 ╚════════════════════════════════════╝
 "@ -ForegroundColor Green
         [int] $choice = Read-Host "Choice"
@@ -49,11 +50,12 @@
 
                 pause
             }
-            4 { start microsoft-edge:"https://lab.flipper.net/" }
-            5 { start microsoft-edge:"https://googlechromelabs.github.io/serial-terminal/" }
+            4 { . "$PWD\apps\!SLCIT\test\build.ps1" }
+            5 { start microsoft-edge:"https://lab.flipper.net/" }
+            6 { start microsoft-edge:"https://googlechromelabs.github.io/serial-terminal/" }
         }
     }
-    while ($choice -ne 6)
+    while ($choice -ne 7)
 }
 
 Main
