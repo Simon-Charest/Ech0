@@ -37,22 +37,22 @@
                 Remove-Item -Path $BUILD_PATH -Recurse -Force -ErrorAction SilentlyContinue
 
                 # Go to app directory
-                cd $APP_PATH
+                Set-Location $APP_PATH
 
                 # Build app
                 ufbt $PROJECT_NAME
 
                 # Copy application binary
-                cp $APP_BINARY $APP_PATH -ErrorAction SilentlyContinue
+                Copy-Item $APP_BINARY $APP_PATH -ErrorAction SilentlyContinue
 
                 # Go back to current directory
-                cd $currentDirectory
+                Set-Location $currentDirectory
 
                 pause
             }
             4 { . "$PWD\apps\!SLCIT\test\build.ps1" }
-            5 { start microsoft-edge:"https://lab.flipper.net/" }
-            6 { start microsoft-edge:"https://googlechromelabs.github.io/serial-terminal/" }
+            5 { Start-Process microsoft-edge:"https://lab.flipper.net/" }
+            6 { Start-Process microsoft-edge:"https://googlechromelabs.github.io/serial-terminal/" }
         }
     }
     while ($choice -ne 7)
